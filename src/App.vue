@@ -1,30 +1,39 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="min-h-screen bg-slate-900">
+    <Navbar />
+    <Hero />
+    <About />
+    <Experience />
+    <Skills />
+    <Education />
+    <Projects />
+    <Contact />
+    <main>
+      <!-- Add other sections here -->
+    </main>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Navbar from './components/Navbar.vue'
+import Hero from './components/Hero.vue'
+import About from './components/About.vue'
+import Experience from './components/Experience.vue'
+import Education from './components/Education.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
+import Skills from './components/Skills.vue'
+export default {
+  name: 'App',
+  components: {
+    Navbar,
+    Hero,
+    About,
+    Experience,
+    Skills,
+    Education,
+    Projects,
+    Contact
+  }
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>
