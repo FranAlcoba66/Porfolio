@@ -5,12 +5,14 @@ export default {
         education: 'Education',
         skills: 'Skills',
         projects: 'Projects',
-        contact: 'Contact'
+        contact: 'Contact',
+        resume: 'Resume',
+        resumePath: '/CV Harvard- Francisco Alcoba-ENG.pdf'
     },
     hero: {
         greeting: 'Hi, I am',
-        role: 'I build things for the web',
-        description: 'I am a full stack developer specialized in creating exceptional digital experiences. Currently, I focus on developing accessible and people-centered products.',
+        role: 'Full Stack Developer',
+        description: 'I am a developer specialized in creating exceptional digital experiences. Currently, I focus on developing accessible and people-centered products.',
         cta: 'Check out my work!'
     },
     about: {
@@ -96,11 +98,9 @@ export default {
         title: 'Contact',
         subtitle: 'Let’s connect!',
         description: 'I am currently open to new opportunities. Whether you have a question or just want to say hi, I’ll do my best to get back to you!',
-        email: 'franciscoadrianalcoba@gmail.com',
         phone: '+54 358 411-8450',
         location: 'Río Cuarto, Córdoba',
         linkedin: 'LinkedIn Profile',
         github: 'GitHub Profile'
     }
-
 }
