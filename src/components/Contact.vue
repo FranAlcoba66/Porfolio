@@ -14,15 +14,15 @@
             </div>
 
             <div class="grid gap-6 max-w-2xl mx-auto">
-                <div class="flex items-center justify-center gap-4 text-slate-300">
-                    <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <a :href="'mailto:' + $t('contact.email')" class="hover:text-teal-400 transition-colors">
-                        {{ $t('contact.email') }}
-                    </a>
-                </div>
+                 <div class="flex items-center justify-center gap-4 text-slate-300">
+        <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <a :href="emailLink" class="hover:text-teal-400 transition-colors">
+            {{ emailAddress }}
+        </a>
+    </div>
 
                 <div class="flex items-center justify-center gap-4 text-slate-300">
                     <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,6 +70,14 @@
 
 <script>
 export default {
-    name: 'Contact'
+    name: 'Contact',
+    computed: {
+        emailAddress() {
+            return 'franciscoadrianalcoba@gmail.com'
+        },
+        emailLink() {
+            return `mailto:${this.emailAddress}`
+        }
+    }
 }
 </script>
