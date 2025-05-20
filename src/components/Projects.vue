@@ -56,7 +56,7 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
-import portfolio from '../assets/porfolio.png'
+import portfolio from '../assets/portfolio.png'
 
 export default {
     name: 'Projects',
