@@ -178,16 +178,31 @@ export default {
 
 <style scoped>
 .nav-arrow-btn {
-  /* @apply text-teal-400;
-    @apply text-2xl;
-    @apply font-bold;
-    @apply px-4;
-    @apply py-2;
-    @apply hover:bg-teal-400/10;
-    @apply rounded;
-    @apply transition-colors;
-    @apply duration-300;
-    @apply disabled:opacity-50;
-    @apply disabled:cursor-not-allowed; */
+  background-color: #1e293b; /* slate-800 */
+  color: #2dd4bf; /* teal-400 */
+  border: 1px solid #2dd4bf;
+  border-radius: 9999px; /* rounded-full */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  transition: all 0.3s ease;
 }
+
+.nav-arrow-btn:hover:not(:disabled) {
+  background-color: #2dd4bf; /* teal-400 */
+  color: #0f172a; /* slate-900 */
+  transform: scale(1.05);
+}
+
+.nav-arrow-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+
 </style>
