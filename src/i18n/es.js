@@ -1,6 +1,6 @@
 export default {
     navbar: {
-        home: 'Inicio',
+        hero: 'Inicio',
         about: 'Sobre Mí',
         experience: 'Experiencia',
         education: 'Educación',

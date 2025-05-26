@@ -2,7 +2,7 @@
     <section id="experience" class="section-container">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 flex items-center">
-                <span class="text-teal-400 mr-2">02.</span>
+                <span class="text-teal-400 mr-2">03.</span>
                 <span class="heading-gradient">{{ $t('experience.title') }}</span>
             </h2>
 
