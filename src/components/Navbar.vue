@@ -59,11 +59,8 @@
 
         <div class="text-center">
           <span class="text-teal-400 font-medium">
-            {{ currentIndex + 1 }}/{{ menuItems.length }}
+            {{ currentIndex + 1 }}/{{ menuItems.length }} - {{ $t(`navbar.${menuItems[currentIndex].name}`) }}
           </span>
-          <p class="text-teal-400">
-            {{ $t(`navbar.${menuItems[currentIndex].name}`) }}
-          </p>
         </div>
 
         <button
