@@ -84,7 +84,7 @@ export default {
         tools: 'Herramientas y Metodologías'
     },
     projects: {
-        title: 'Algunos Proyectos que he Construido',
+        title: 'Proyectos que he Construido',
         featuredProject: 'Proyecto Destacado',
         portfolio: {
             title: 'Sitio Web Personal',

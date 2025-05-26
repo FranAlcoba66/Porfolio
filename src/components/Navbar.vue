@@ -146,7 +146,10 @@ export default {
         menuItems[currentIndex.value].href
       );
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -40; // Ajustá este valor a la altura real de tu navbar
+        const y =
+          section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     };
 
