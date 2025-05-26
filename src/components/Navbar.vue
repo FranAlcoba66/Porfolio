@@ -54,21 +54,49 @@
           class="nav-arrow-btn"
           :disabled="currentIndex === 0"
         >
-          ←
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
         </button>
 
         <div class="text-center">
           <span class="text-teal-400 font-medium">
-            {{ currentIndex + 1 }}/{{ menuItems.length }} - {{ $t(`navbar.${menuItems[currentIndex].name}`) }}
+            {{ currentIndex + 1 }}/{{ menuItems.length }} -
+            {{ $t(`navbar.${menuItems[currentIndex].name}`) }}
           </span>
         </div>
 
+        <!-- Reemplazo del botón "→" -->
         <button
           @click="nextSection"
           class="nav-arrow-btn"
           :disabled="currentIndex === menuItems.length - 1"
         >
-          →
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
         </button>
       </div>
     </div>
@@ -82,94 +110,96 @@ import { onMounted, onBeforeUnmount } from "vue";
 
 export default {
   setup() {
-  const { locale } = useI18n();
-  const currentIndex = ref(0);
+    const { locale } = useI18n();
+    const currentIndex = ref(0);
 
-  const menuItems = [
-    { name: "hero", href: "#hero" },
-    { name: "about", href: "#about" },
-    { name: "experience", href: "#experience" },
-    { name: "skills", href: "#skills" },
-    { name: "education", href: "#education" },
-    { name: "projects", href: "#projects" },
-    { name: "contact", href: "#contact" },
-  ];
+    const menuItems = [
+      { name: "hero", href: "#hero" },
+      { name: "about", href: "#about" },
+      { name: "experience", href: "#experience" },
+      { name: "skills", href: "#skills" },
+      { name: "education", href: "#education" },
+      { name: "projects", href: "#projects" },
+      { name: "contact", href: "#contact" },
+    ];
 
-  const toggleLanguage = () => {
-    locale.value = locale.value === "es" ? "en" : "es";
-  };
-
-  const nextSection = () => {
-    if (currentIndex.value < menuItems.length - 1) {
-      currentIndex.value++;
-      scrollToCurrent();
-    }
-  };
-
-  const prevSection = () => {
-    if (currentIndex.value > 0) {
-      currentIndex.value--;
-      scrollToCurrent();
-    }
-  };
-
-  const scrollToCurrent = () => {
-    const section = document.querySelector(menuItems[currentIndex.value].href);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // IntersectionObserver logic
-  let observer;
-
-  const observeSections = () => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.4, // Trigger when 40% of the section is visible
+    const toggleLanguage = () => {
+      locale.value = locale.value === "es" ? "en" : "es";
     };
 
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = menuItems.findIndex(
-            (item) => item.href === `#${entry.target.id}`
-          );
-          if (index !== -1) {
-            currentIndex.value = index;
+    const nextSection = () => {
+      if (currentIndex.value < menuItems.length - 1) {
+        currentIndex.value++;
+        scrollToCurrent();
+      }
+    };
+
+    const prevSection = () => {
+      if (currentIndex.value > 0) {
+        currentIndex.value--;
+        scrollToCurrent();
+      }
+    };
+
+    const scrollToCurrent = () => {
+      const section = document.querySelector(
+        menuItems[currentIndex.value].href
+      );
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    // IntersectionObserver logic
+    let observer;
+
+    const observeSections = () => {
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4, // Trigger when 40% of the section is visible
+      };
+
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = menuItems.findIndex(
+              (item) => item.href === `#${entry.target.id}`
+            );
+            if (index !== -1) {
+              currentIndex.value = index;
+            }
           }
-        }
+        });
+      }, options);
+
+      menuItems.forEach((item) => {
+        const section = document.querySelector(item.href);
+        if (section) observer.observe(section);
       });
-    }, options);
+    };
 
-    menuItems.forEach((item) => {
-      const section = document.querySelector(item.href);
-      if (section) observer.observe(section);
+    const disconnectObserver = () => {
+      if (observer) observer.disconnect();
+    };
+
+    onMounted(() => {
+      observeSections();
     });
-  };
 
-  const disconnectObserver = () => {
-    if (observer) observer.disconnect();
-  };
+    onBeforeUnmount(() => {
+      disconnectObserver();
+    });
 
-  onMounted(() => {
-    observeSections();
-  });
-
-  onBeforeUnmount(() => {
-    disconnectObserver();
-  });
-
-  return {
-    currentLocale: locale,
-    toggleLanguage,
-    menuItems,
-    currentIndex,
-    nextSection,
-    prevSection,
-  };
-}
+    return {
+      currentLocale: locale,
+      toggleLanguage,
+      menuItems,
+      currentIndex,
+      nextSection,
+      prevSection,
+    };
+  },
 };
 </script>
 
@@ -200,6 +230,4 @@ export default {
   opacity: 0.3;
   cursor: not-allowed;
 }
-
-
 </style>
