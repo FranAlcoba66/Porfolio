@@ -81,57 +81,98 @@
 <script>
 import { useI18n } from "vue-i18n";
 import { ref } from "vue";
+import { onMounted, onBeforeUnmount } from "vue";
 
 export default {
   setup() {
-    const { locale } = useI18n();
-    const currentIndex = ref(0);
+  const { locale } = useI18n();
+  const currentIndex = ref(0);
 
-    const menuItems = [
-      { name: "hero", href: "#hero" },
-      { name: "about", href: "#about" },
-      { name: "experience", href: "#experience" },
-      { name: "skills", href: "#skills" },
-      { name: "education", href: "#education" },
-      { name: "projects", href: "#projects" },
-      { name: "contact", href: "#contact" },
-    ];
+  const menuItems = [
+    { name: "hero", href: "#hero" },
+    { name: "about", href: "#about" },
+    { name: "experience", href: "#experience" },
+    { name: "skills", href: "#skills" },
+    { name: "education", href: "#education" },
+    { name: "projects", href: "#projects" },
+    { name: "contact", href: "#contact" },
+  ];
 
-    const toggleLanguage = () => {
-      locale.value = locale.value === "es" ? "en" : "es";
+  const toggleLanguage = () => {
+    locale.value = locale.value === "es" ? "en" : "es";
+  };
+
+  const nextSection = () => {
+    if (currentIndex.value < menuItems.length - 1) {
+      currentIndex.value++;
+      scrollToCurrent();
+    }
+  };
+
+  const prevSection = () => {
+    if (currentIndex.value > 0) {
+      currentIndex.value--;
+      scrollToCurrent();
+    }
+  };
+
+  const scrollToCurrent = () => {
+    const section = document.querySelector(menuItems[currentIndex.value].href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // IntersectionObserver logic
+  let observer;
+
+  const observeSections = () => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.4, // Trigger when 40% of the section is visible
     };
 
-    const nextSection = () => {
-      if (currentIndex.value < menuItems.length - 1) {
-        currentIndex.value++;
-        document
-          .querySelector(menuItems[currentIndex.value].href)
-          .scrollIntoView({
-            behavior: "smooth",
-          });
-      }
-    };
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = menuItems.findIndex(
+            (item) => item.href === `#${entry.target.id}`
+          );
+          if (index !== -1) {
+            currentIndex.value = index;
+          }
+        }
+      });
+    }, options);
 
-    const prevSection = () => {
-      if (currentIndex.value > 0) {
-        currentIndex.value--;
-        document
-          .querySelector(menuItems[currentIndex.value].href)
-          .scrollIntoView({
-            behavior: "smooth",
-          });
-      }
-    };
+    menuItems.forEach((item) => {
+      const section = document.querySelector(item.href);
+      if (section) observer.observe(section);
+    });
+  };
 
-    return {
-      currentLocale: locale,
-      toggleLanguage,
-      menuItems,
-      currentIndex,
-      nextSection,
-      prevSection,
-    };
-  },
+  const disconnectObserver = () => {
+    if (observer) observer.disconnect();
+  };
+
+  onMounted(() => {
+    observeSections();
+  });
+
+  onBeforeUnmount(() => {
+    disconnectObserver();
+  });
+
+  return {
+    currentLocale: locale,
+    toggleLanguage,
+    menuItems,
+    currentIndex,
+    nextSection,
+    prevSection,
+  };
+}
 };
 </script>
 
