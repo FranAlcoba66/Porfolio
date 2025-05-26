@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen flex items-center section-container">
+  <section id="hero" class="min-h-screen flex items-center section-container">
     <div class="max-w-3xl">
       <h4 class="text-teal-400 mb-4 animate-fadeIn">{{ $t('hero.greeting') }}</h4>
       <h1 class="text-5xl sm:text-7xl font-bold mb-2 heading-gradient animate-typing">

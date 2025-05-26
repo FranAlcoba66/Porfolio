@@ -88,6 +88,8 @@ export default {
     const currentIndex = ref(0);
 
     const menuItems = [
+      { name: "home", href: "#hero" },
+
       { name: "about", href: "#about" },
       { name: "experience", href: "#experience" },
       { name: "skills", href: "#skills" },

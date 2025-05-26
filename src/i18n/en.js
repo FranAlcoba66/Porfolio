@@ -1,5 +1,6 @@
 export default {
     navbar: {
+        home: 'Home',
         about: 'About',
         experience: 'Experience',
         education: 'Education',
@@ -87,11 +88,11 @@ export default {
         featuredProject: 'Featured Project',
         portfolio: {
             title: 'Portfolio Website',
-            description: 'A personal web application built with Vue.js and Tailwind CSS. It showcases my experience, projects, and skills in a modern and interactive way.'
+            description: 'Personal portfolio developed with modern technologies showcasing my professional experience, technical skills, and projects. Designed with a focus on user experience, smooth animations, and a responsive layout.'
         },
-        taskManager: {
-            title: 'Task Manager App',
-            description: 'Task management application with user authentication, real-time storage, and drag-and-drop functionality.'
+        exchange: {
+            title: 'Platzi Exchange App',
+            description: 'Interactive web application for tracking cryptocurrencies. It displays the top cryptocurrencies with up-to-date information such as price, market capitalization, and 24-hour variation. Each cryptocurrency has a detailed view including its price history and the markets where it is available. The app features a currency converter between USD and the selected cryptocurrency, along with dynamic charts to analyze price trends. Real-time data is fetched using the Coinbase REST API. The entire design is fully responsive, built with TailwindCSS to ensure a smooth experience across all devices.'
         }
     },
     contact: {

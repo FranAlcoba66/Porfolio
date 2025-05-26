@@ -1,5 +1,6 @@
 export default {
     navbar: {
+        home: 'Inicio',
         about: 'Sobre Mí',
         experience: 'Experiencia',
         education: 'Educación',
@@ -87,11 +88,11 @@ export default {
         featuredProject: 'Proyecto Destacado',
         portfolio: {
             title: 'Sitio Web Personal',
-            description: 'Una aplicación web personal construida con Vue.js y Tailwind CSS. Presenta mi experiencia, proyectos y habilidades de una manera moderna e interactiva.'
+            description: 'Portfolio personal desarrollado con tecnologías modernas que muestra mi experiencia profesional, habilidades técnicas y proyectos. Diseñado con un enfoque en la experiencia del usuario, animaciones suaves y un diseño responsivo.'
         },
         taskManager: {
-            title: 'Aplicación de Gestión de Tareas',
-            description: 'Aplicación de gestión de tareas con autenticación de usuarios, almacenamiento en tiempo real y funcionalidades de arrastrar y soltar.'
+            title: 'Platzi Exchange',
+            description: 'Aplicación web interactiva para el seguimiento de criptomonedas. Permite visualizar las principales criptodivisas con datos actualizados como precio, capitalización de mercado y variación en las últimas 24 horas. Cada criptomoneda cuenta con una vista detallada que incluye su historial de precios y los mercados en los que está disponible. Integra un conversor entre USD y la criptomoneda seleccionada, así como gráficos dinámicos para analizar la evolución de precios. La información se obtiene en tiempo real mediante la API REST de Coinbase. Todo el diseño es completamente responsivo, desarrollado con TailwindCSS para garantizar una experiencia fluida en cualquier dispositivo.',
         }
     },
     contact: {
