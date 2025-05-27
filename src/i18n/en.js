@@ -86,6 +86,10 @@ export default {
     projects: {
         title: "Some Things I've Built",
         featuredProject: 'Featured Project',
+        coffeeShop: {
+            title: 'Coffee Shop',
+            description: 'Web application developed in Django to manage products and handle orders in a coffee shop. It allows users to view the menu with images, create orders, and efficiently manage the order workflow in a simple and agile way.'
+        },
         portfolio: {
             title: 'Portfolio Website',
             description: 'Personal portfolio developed with modern technologies showcasing my professional experience, technical skills, and projects. Designed with a focus on user experience, smooth animations, and a responsive layout.'

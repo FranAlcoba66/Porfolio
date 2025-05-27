@@ -87,15 +87,42 @@
 
 <script>
 import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 import portfolio from "../assets/portfolio.png";
 import exchange from "../assets/exchange.png";
-
+import coffeShop from "../assets/coffeeShop.png";
 export default {
   name: "Projects",
   setup() {
     const { t } = useI18n();
 
     const projects = [
+      {
+        id: "coffeeShop",
+        image: coffeShop,
+        technologies: [
+          "Python",
+          "Django",
+          "djangorestframework",
+          "HTML",
+          "Tailwind CSS",
+          "Django Templates",
+          "SQLite",
+          "MySQL ",
+          "PythonAnywhere ",
+          "Python Decouple",
+          "Crispy Forms",
+        ],
+        github: "https://github.com/FranAlcoba66/CoffeShop",
+        demo: "https://franzalcoba.pythonanywhere.com/",
+      },
+      {
+        id: "exchange",
+        image: exchange,
+        technologies: ["Vue.js", "Html", "Vuex", "Tailwind CSS"],
+        github: "https://github.com/FranAlcoba66/platzi-exchange-coincap",
+        demo: "https://platzi-exchange-coincap.vercel.app",
+      },
       {
         id: "portfolio",
         image: portfolio,
@@ -109,24 +136,17 @@ export default {
         github: "https://github.com/FranAlcoba66/Porfolio",
         demo: "https://porfolio-two-pearl.vercel.app/",
       },
-      {
-        id: "exchange",
-        image: exchange,
-        technologies: ["Vue.js", "Html", "Vuex", "Tailwind CSS"],
-        github: "https://github.com/FranAlcoba66/platzi-exchange-coincap",
-        demo: "https://platzi-exchange-coincap.vercel.app",
-      },
     ];
 
-    const localizedProjects = projects.map((project) => ({
-      ...project,
-      title: t(`projects.${project.id}.title`),
-      description: t(`projects.${project.id}.description`),
-    }));
+    const localizedProjects = computed(() =>
+      projects.map((project) => ({
+        ...project,
+        title: t(`projects.${project.id}.title`),
+        description: t(`projects.${project.id}.description`),
+      }))
+    );
 
-    return {
-      localizedProjects,
-    };
+    return { localizedProjects };
   },
 };
 </script>

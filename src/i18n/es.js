@@ -86,11 +86,15 @@ export default {
     projects: {
         title: 'Proyectos que he Construido',
         featuredProject: 'Proyecto Destacado',
+        coffeeShop: {
+            title: 'Coffee Shop',
+            description: 'Aplicación web desarrollada en Django para administrar productos y gestionar pedidos en una cafetería. Permite ver el menú con imágenes, crear órdenes, y controlar el flujo de pedidos de forma ágil y sencilla.'
+        },
         portfolio: {
             title: 'Sitio Web Personal',
             description: 'Portfolio personal desarrollado con tecnologías modernas que muestra mi experiencia profesional, habilidades técnicas y proyectos. Diseñado con un enfoque en la experiencia del usuario, animaciones suaves y un diseño responsivo.'
         },
-        taskManager: {
+        exchange: {
             title: 'Platzi Exchange',
             description: 'Aplicación web interactiva para el seguimiento de criptomonedas. Permite visualizar las principales criptodivisas con datos actualizados como precio, capitalización de mercado y variación en las últimas 24 horas. Cada criptomoneda cuenta con una vista detallada que incluye su historial de precios y los mercados en los que está disponible. Integra un conversor entre USD y la criptomoneda seleccionada, así como gráficos dinámicos para analizar la evolución de precios. La información se obtiene en tiempo real mediante la API REST de Coinbase. Todo el diseño es completamente responsivo, desarrollado con TailwindCSS para garantizar una experiencia fluida en cualquier dispositivo.',
         }
