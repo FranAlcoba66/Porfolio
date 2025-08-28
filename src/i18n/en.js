@@ -8,7 +8,7 @@ export default {
         projects: 'Projects',
         contact: 'Contact',
         resume: 'Resume',
-        resumePath: '/CV Harvard- Francisco Alcoba-ENG.pdf'
+        resumePath: '/CV_Harvard-Francisco_Alcoba-ENG.pdf'
     },
     hero: {
         greeting: 'Hi, I am',
