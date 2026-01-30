@@ -1,6 +1,6 @@
 # Portfolio Personal - Francisco Alcoba
 
-![Portfolio Preview](./src/assets/porfolio.png)
+![Portfolio Preview](./src/assets/portfolio.png)
 
 ## 🚀 Descripción
 
@@ -24,7 +24,7 @@ Portfolio personal desarrollado con tecnologías modernas que muestra mi experie
 - PostCSS - Procesador CSS
 
 ### Herramientas de Desarrollo
-- Vite - Build tool y servidor de desarrollo
+- Vue CLI - Herramienta estándar de desarrollo para Vue.js
 - ESLint - Linter de código JavaScript
 - Git - Control de versiones
 
@@ -71,6 +71,7 @@ src/
 - `Hero` - Sección de presentación principal
 - `About` - Información personal y profesional
 - `Experience` - Experiencia laboral
+- `Education` - Formación académica
 - `Skills` - Habilidades técnicas
 - `Projects` - Proyectos destacados
 - `Contact` - Información de contacto
