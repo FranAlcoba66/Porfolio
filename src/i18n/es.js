@@ -8,18 +8,18 @@ export default {
         projects: 'Proyectos',
         contact: 'Contacto',
         resume: 'Currículum',
-        resumePath: '/CV_Harvard-Francisco_Alcoba-ESP.pdf'
+        resumePath: '/CV-Francisco:_Alcoba-[ES].pdf'
     },
     hero: {
         greeting: 'Hola, soy',
         role: 'Full Stack Developer',
-        description: 'Soy desarrollador especializado en crear experiencias digitales excepcionales. Actualmente, me enfoco en desarrollar productos accesibles y centrados en las personas.',
+        description: 'Desarrollador Full Stack con más de cuatro años de experiencia creando soluciones digitales que optimizan procesos y aportan valor. Me apasiona el aprendizaje continuo y encontrar formas creativas de resolver problemas.',
         cta: '¡Mira mi trabajo!'
     },
     about: {
         title: 'Sobre Mí',
-        description1: 'Soy desarrollador full stack con más de 2 años de experiencia en PHP/Laravel, JavaScript y SQL. He trabajado en frontend y backend, desarrollando herramientas de backoffice, integrando APIs y automatizando flujos de trabajo.',
-        description2: 'Me motiva colaborar en equipos multidisciplinarios, aprendiendo y compartiendo conocimientos para crear soluciones efectivas e innovadoras.',
+        description1: 'Soy un desarrollador Full Stack con más de cuatro años de experiencia creando soluciones digitales que optimizan procesos y aportan valor a los equipos. Me apasiona el aprendizaje continuo, explorar nuevas ideas y encontrar formas creativas de resolver problemas.',
+        description2: 'Además de mis habilidades técnicas, me destaco por mi capacidad para trabajar en equipo y fomentar un ambiente laboral positivo. Mi empatía me permite conectar fácilmente con las personas y potenciar la colaboración en entornos multidisciplinarios.',
         recentTech: 'Aquí hay algunas tecnologías con las que he estado trabajando recientemente:',
         profileAlt: 'Foto de perfil'
     },
@@ -30,19 +30,24 @@ export default {
                 title: 'Desarrollador Full Stack',
                 company: 'Innexus',
                 location: 'Río Cuarto, Córdoba, Argentina',
-                date: 'Febrero 2025 - Actualidad',
-                point1: 'Se trabajó con clientes de la talla como www.adrianmercado.com.ar.',
-                point2: 'Se desarrolló features que permitieran alojar múltiples datos de facturación de un usuario y de esta forma cobrarle a diferentes perfiles de pago.'
+                date: 'Febrero 2024 - Presente',
+                point1: 'Cliente: Iluminar Laboratorio (iluminarlaboratorio.com.ar) - Colaboré en la escalabilidad del sistema, transformándolo de una herramienta interna en un producto comercial para otros laboratorios.',
+                point2: 'Cliente: Adrian Mercado (adrianmercado.com.ar) - Implementé un sistema de facturación multiperfil, permitiendo a los usuarios realizar pagos con diferentes CUITs y cuentas bancarias.',
+                point3: 'Desarrollé una calculadora de ganancias de subastas y reportes financieros exportables en PDF y Excel, mejorando la visibilidad de los ingresos.',
+                point4: 'Optimicé el rendimiento de la plataforma mediante la resolución de errores (bugs), mejorando la experiencia del usuario.',
+                point5: 'Herramientas: PHP, Python, JavaScript, Django, FastAPI, Laravel, React.js, PostgreSQL, MySQL, JIRA, Bitbucket, Docker, HTML, CSS.'
             },
             picallex: {
                 title: 'Desarrollador Full Stack',
                 company: 'Picallex',
-                location: 'Hipólito Yrigoyen 1227, X5800 Río Cuarto, Córdoba, Argentina',
-                date: 'Abril 2022 - Diciembre 2024',
-                point1: 'Diseño y desarrollo de soluciones tecnológicas que optimizaron procesos clave en diversas áreas dentro de la empresa',
-                point2: 'Contabilidad: Implementación de sistema para la automatización del cálculo y generación de invoices, así como herramientas para el análisis de métricas financieras',
-                point3: 'Comercial: Desarrollo de plataforma que permitió identificar y gestionar Key Account Managers (KAMs) de manera eficiente, mejorando la estrategia comercial y la asignación de recursos',
-                point4: 'Soporte: Desarrollo de funcionalidades para el manejo y administración de sistemas PBX, facilitando la operación y resolución de incidencias técnicas'
+                location: 'Río Cuarto, Córdoba, Argentina',
+                date: 'Enero 2022 - Enero 2024',
+                point1: 'Desarrollé vistas personalizadas y un conjunto de herramientas adaptadas para los equipos de ventas, soporte y facturación, optimizando sus flujos de trabajo.',
+                point2: 'Automaticé el cálculo y la generación de facturas mediante tareas programadas (cron jobs), lo que redujo la carga de trabajo manual y mejoró la precisión financiera.',
+                point3: 'Creé una plataforma para la gestión eficiente de Key Account Managers (KAMs), mejorando el seguimiento y manejo de clientes clave.',
+                point4: 'Desarrollé funcionalidades para la administración de centrales telefónicas (PBX) y la resolución de incidentes técnicos para el equipo de soporte.',
+                point5: 'Generé reportes financieros exportables en PDF y Excel para facilitar el análisis de métricas.',
+                point6: 'Herramientas: Python, PHP, JavaScript, Django, Laravel, SQL, HTML, CSS, MySQL, PHPUnit, Docker, JIRA, GitHub.'
             }
         }
     },
@@ -78,10 +83,12 @@ export default {
     },
     skills: {
         title: 'Habilidades',
-        frontend: 'Desarrollo Frontend',
         backend: 'Desarrollo Backend',
+        frontend: 'Desarrollo Frontend',
         databases: 'Bases de Datos',
-        tools: 'Herramientas y Metodologías'
+        tools: 'Herramientas y Metodologías',
+        infrastructure: 'Infraestructura \u0026 DevOps',
+        cloud: 'Cloud \u0026 AWS'
     },
     projects: {
         title: 'Proyectos que he Construido',
@@ -97,6 +104,14 @@ export default {
         exchange: {
             title: 'Platzi Exchange',
             description: 'Aplicación web interactiva para el seguimiento de criptomonedas. Permite visualizar las principales criptodivisas con datos actualizados como precio, capitalización de mercado y variación en las últimas 24 horas. Cada criptomoneda cuenta con una vista detallada que incluye su historial de precios y los mercados en los que está disponible. Integra un conversor entre USD y la criptomoneda seleccionada, así como gráficos dinámicos para analizar la evolución de precios. La información se obtiene en tiempo real mediante la API REST de Coinbase. Todo el diseño es completamente responsivo, desarrollado con TailwindCSS para garantizar una experiencia fluida en cualquier dispositivo.',
+        },
+        municipalDecrees: {
+            title: 'Sistema de Gestión de Documentos Legales',
+            description: 'Plataforma web para la administración y consulta de documentos legales municipales (decretos y ordenanzas). Permite a los usuarios autenticados realizar operaciones CRUD sobre la legislación, organizando los documentos por municipalidad, localidad, departamento y provincia. Incluye autenticación JWT, control de permisos, API RESTful documentada, y sistema de búsqueda y filtrado.',
+        },
+        emailChanneling: {
+            title: 'Canalizador de Consultas y Reclamos',
+            description: 'Sistema backend que automatiza la gestión de correos electrónicos mediante Inteligencia Artificial. Integra Gmail, Slack y OpenAI para clasificar, resumir y responder automáticamente consultas y reclamos de clientes. Utiliza procesamiento en tiempo real con arquitectura event-driven, clasificación inteligente de correos por categoría (operaciones, comercial, administración, facturación), y notificaciones instantáneas a Slack con botones interactivos.',
         }
     },
     contact: {

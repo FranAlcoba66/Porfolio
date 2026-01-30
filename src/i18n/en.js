@@ -8,18 +8,18 @@ export default {
         projects: 'Projects',
         contact: 'Contact',
         resume: 'Resume',
-        resumePath: '/CV_Harvard-Francisco_Alcoba-ENG.pdf'
+        resumePath: '/CV-Francisco_Alcoba-[EN].pdf'
     },
     hero: {
         greeting: 'Hi, I am',
         role: 'Full Stack Developer',
-        description: 'I am a developer specialized in creating exceptional digital experiences. Currently, I focus on developing accessible and people-centered products.',
+        description: 'Full Stack Developer with over four years of experience creating digital solutions that optimize processes and add value. I am passionate about continuous learning and finding creative ways to solve problems.',
         cta: 'Check out my work!'
     },
     about: {
         title: 'About Me',
-        description1: 'I am a full stack developer with more than 2 years of experience in PHP/Laravel, JavaScript, and SQL. I have worked in both frontend and backend, developing backoffice tools, integrating APIs, and automating workflows.',
-        description2: 'I am motivated by collaborating in multidisciplinary teams, learning and sharing knowledge to create effective and innovative solutions.',
+        description1: 'I am a Full Stack developer with over four years of experience creating digital solutions that optimize processes and add value to teams. I am passionate about continuous learning, exploring new ideas, and finding creative ways to solve problems.',
+        description2: 'In addition to my technical skills, I excel at teamwork and fostering a positive work environment. My empathy allows me to easily connect with people and enhance collaboration in multidisciplinary settings.',
         recentTech: "Here are some technologies I've been working with recently:",
         profileAlt: 'Profile picture'
     },
@@ -29,20 +29,25 @@ export default {
             innexus: {
                 title: 'Full Stack Developer',
                 company: 'Innexus',
-                location: 'Remote',
-                date: 'February 2025 - Present',
-                point1: 'Collaborated with high-profile clients such as www.adrianmercado.com.ar.',
-                point2: 'Developed features to support multiple billing profiles per user, enabling charges to different payment configurations.'
+                location: 'Río Cuarto, Córdoba, Argentina',
+                date: 'February 2024 - Present',
+                point1: 'Client: Iluminar Laboratorio (iluminarlaboratorio.com.ar) - Collaborated on system scalability, transforming it from an internal tool into a commercial product for other laboratories.',
+                point2: 'Client: Adrian Mercado (adrianmercado.com.ar) - Implemented a multi-profile billing system, allowing users to make payments with different tax IDs and bank accounts.',
+                point3: 'Developed an auction profit calculator and exportable financial reports in PDF and Excel, improving revenue visibility.',
+                point4: 'Optimized platform performance by fixing bugs, enhancing the user experience.',
+                point5: 'Tools: PHP, Python, JavaScript, Django, FastAPI, Laravel, React.js, PostgreSQL, MySQL, JIRA, Bitbucket, Docker, HTML, CSS.'
             },
             picallex: {
                 title: 'Full Stack Developer',
                 company: 'Picallex',
-                location: 'Buenos Aires, Argentina',
-                date: 'April 2022 - December 2024',
-                point1: 'Designed and developed technological solutions that streamlined key processes across various departments within the company.',
-                point2: 'Accounting: Implemented a system to automate invoice calculation and generation, along with tools for financial metrics analysis.',
-                point3: 'Sales: Developed a platform to efficiently identify and manage Key Account Managers (KAMs), enhancing commercial strategy and resource allocation.',
-                point4: 'Support: Built functionalities for managing and administering the PBX system, facilitating operations and resolving technical issues.'
+                location: 'Río Cuarto, Córdoba, Argentina',
+                date: 'January 2022 - January 2024',
+                point1: 'Developed custom views and a suite of tools tailored for sales, support, and billing teams, optimizing their workflows.',
+                point2: 'Automated invoice calculation and generation through scheduled tasks (cron jobs), reducing manual workload and improving financial accuracy.',
+                point3: 'Created a platform for efficient Key Account Manager (KAM) management, improving tracking and handling of key clients.',
+                point4: 'Developed functionalities for PBX (phone system) administration and technical incident resolution for the support team.',
+                point5: 'Generated exportable financial reports in PDF and Excel to facilitate metrics analysis.',
+                point6: 'Tools: Python, PHP, JavaScript, Django, Laravel, SQL, HTML, CSS, MySQL, PHPUnit, Docker, JIRA, GitHub.'
             }
         }
     },
@@ -78,10 +83,12 @@ export default {
     },
     skills: {
         title: 'Skills',
-        frontend: 'Frontend Development',
         backend: 'Backend Development',
+        frontend: 'Frontend Development',
         databases: 'Databases',
-        tools: 'Tools & Methodologies'
+        tools: 'Tools \u0026 Methodologies',
+        infrastructure: 'Infrastructure \u0026 DevOps',
+        cloud: 'Cloud \u0026 AWS'
     },
     projects: {
         title: "Some Things I've Built",
@@ -97,6 +104,14 @@ export default {
         exchange: {
             title: 'Platzi Exchange App',
             description: 'Interactive web application for tracking cryptocurrencies. It displays the top cryptocurrencies with up-to-date information such as price, market capitalization, and 24-hour variation. Each cryptocurrency has a detailed view including its price history and the markets where it is available. The app features a currency converter between USD and the selected cryptocurrency, along with dynamic charts to analyze price trends. Real-time data is fetched using the Coinbase REST API. The entire design is fully responsive, built with TailwindCSS to ensure a smooth experience across all devices.'
+        },
+        municipalDecrees: {
+            title: 'Legal Document Management System',
+            description: 'Web platform for managing and consulting municipal legal documents (decrees and ordinances). Allows authenticated users to perform CRUD operations on legislation, organizing documents by municipality, locality, department, and province. Features JWT authentication, permission control, documented RESTful API, and search and filtering system.',
+        },
+        emailChanneling: {
+            title: 'Email Query and Complaint Channeling System',
+            description: 'Backend system that automates email management using Artificial Intelligence. Integrates Gmail, Slack, and OpenAI to classify, summarize, and automatically respond to customer queries and complaints. Features real-time processing with event-driven architecture, intelligent email classification by category (operations, commercial, administration, billing), and instant Slack notifications with interactive buttons.',
         }
     },
     contact: {
